@@ -1,6 +1,6 @@
 import RequestApi from './RequestApi';
 import {React , useEffect , useState} from 'react';
-
+import Row from './components/Row'
 import './App.css';
 
 
@@ -22,7 +22,15 @@ function App() {
 
   return (
     <div >
- eee
+      <section className="lists">
+          {
+            list.map((item,index) => {
+              return (
+                <Row key={index} title={item.title} items={item.items} />
+              )
+            })
+          }
+      </section>
     </div>
   );
 }
