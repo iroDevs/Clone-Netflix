@@ -1,14 +1,17 @@
 import RequestApi from './RequestApi';
-import {React , useEffect} from 'react';
-
+import {React , useEffect , useState} from 'react';
+import Row from './components/Row'
 import './App.css';
 
 
 function App() {
    
+  const [list , setList] = useState([])
+
   async function getAllMovies(){
-    let list = await RequestApi.getHomeList()
-    console.log(list);
+    let Movielist = await RequestApi.getHomeList()
+    setList(Movielist);
+    return 0;
   }
 
   useEffect(()=>{
@@ -19,7 +22,15 @@ function App() {
 
   return (
     <div >
- eee
+      <section className="lists">
+          {
+            list.map((item,index) => {
+              return (
+                <Row key={index} title={item.title} items={item.items} />
+              )
+            })
+          }
+      </section>
     </div>
   );
 }

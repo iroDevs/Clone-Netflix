@@ -1,3 +1,4 @@
+/* eslint-disable import/no-anonymous-default-export */
 import Key from './Api';
 
 const {API_KEY , API_URL} = Key
