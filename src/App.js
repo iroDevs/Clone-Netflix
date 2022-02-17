@@ -1,14 +1,17 @@
 import RequestApi from './RequestApi';
-import {React , useEffect} from 'react';
+import {React , useEffect , useState} from 'react';
 
 import './App.css';
 
 
 function App() {
    
+  const [list , setList] = useState([])
+
   async function getAllMovies(){
-    let list = await RequestApi.getHomeList()
-    console.log(list);
+    let Movielist = await RequestApi.getHomeList()
+    setList(Movielist);
+    return 0;
   }
 
   useEffect(()=>{
