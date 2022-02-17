@@ -19,6 +19,13 @@
 .movieRow-item img {
   width: 100%;
   transform: scale(0.9);
+  transition: all ease 0.3s;
+}
+
+
+.movieRow-item img:hover {
+  transform: scale(1);
+  cursor: pointer;
 }
 
 .movieRow-list {
