@@ -10,15 +10,33 @@ function App() {
   const [list , setList] = useState([])
   const [featureData, setFeatureData] = useState(null)
 
+ function getRandomInt(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
+}
+
+  async function getDestaque(Movies){
+    let originais = Movies.filter((item) =>item.slug === 'originals');
+    let listOriginais = originais[0].items.results
+    const min = 1;
+    const max = listOriginais.length - 1;
+   const radom = getRandomInt(min,max)
+    const chosen = listOriginais[radom]
+    const destaque = await RequestApi.getInfoById(chosen.id,'tv');
+   setFeatureData(destaque);
+   
+  }
+
   async function getAllMovies(){
     let Movielist = await RequestApi.getHomeList()
     setList(Movielist);
-
-    //vamos pegar um pra colocar em destaque feature Data
+//vamos pegar um pra colocar em destaque feature Data
+  await getDestaque(Movielist)
     return 0;
   }
 
-  useEffect(()=>{
+  useEffect( ()=>{
     getAllMovies();
 
   },[])
