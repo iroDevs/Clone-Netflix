@@ -28,10 +28,9 @@
   cursor: pointer;
 }
 
-.movieRow-list {
-  width: 9999999999px;
+.movieRow-list{
+  transition: all ease 0.5s;
 }
-
 
 
 
