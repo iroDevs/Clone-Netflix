@@ -1,5 +1,6 @@
 .Row {
   margin-bottom:30px;
+  
 }
 
 .Row  h2{
@@ -8,7 +9,12 @@
 
 .row-listarea {
   overflow-x: hidden;
-  padding-left: 30px
+  padding-left: 30px;
+  overflow-x: auto;
+}
+
+.row-listarea::-webkit-scrollbar{
+  width:0;
 }
 
 .movieRow-item {
