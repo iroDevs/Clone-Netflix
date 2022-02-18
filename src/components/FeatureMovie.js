@@ -32,14 +32,14 @@ const radom = getRandomInt(50,98);
        <div className="featured-horizontal">
           <div className="featured-name">{item.original_name}</div>
           <div className="featured-info">
-              <div className="featured-points">{radom}% relevante</div>
-              <div className="featured-year">{Year.getFullYear()}</div>
+              <div className="featured-points">{radom}% relevante </div>
+              <div className="featured-year"> ano {Year.getFullYear()}</div>
               <div className="featured-seasons">{item.number_of_seasons} temporada{item.number_of_seasons !== 1 ? 's' : ''}</div>
        </div>
        <div className='featured-desc'>{desc}</div>
        <div className='featured-buttons'>
-        <a href='#'>Assistir</a>
-        <a href='#'>+ Minha Lista</a>
+        <a href='#' className='btn-play'>Assistir</a>
+        <a href='#' className='btn-list'>+ Minha Lista</a>
        </div>
        <div className='featured-genres'>Generos: {genres.join(', ')}</div>
      </div>
