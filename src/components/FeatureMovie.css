@@ -18,7 +18,7 @@
   flex-direction: column;
   justify-content:center;
   padding-left: 30px;
-  padding-top: 70px;
+  padding-bottom: 100px;
 }
 
 .featured-name {
@@ -93,4 +93,38 @@
   margin-top : 15px;
   font-size : 18px;
   color : #999;
+}
+
+@media (max-width: 757px) {
+.featured {
+  height: 80vh;
+  
+}
+
+.featured-name {
+  font-size: 30px;
+  
+}
+
+.feature-info {
+  font-size: 16px;
+}
+
+.featured-desc {
+  font-size: 14px;
+  max-width:100%;
+  margin-right: 30px;
+  color: rgb(202, 199, 199);
+}
+
+.btn-play{
+  font-size:16px;
+}
+
+.btn-list{
+  font-size:16px;
+}
+.featured-genres {
+  font-size:14px;
+}
 }

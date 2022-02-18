@@ -5,6 +5,7 @@ import Row from './components/Row'
 import FeatureMovie from './components/FeatureMovie';
 import Header from './components/Header';
 import Footer from './components/Footer';
+
 import './App.css';
 
 
@@ -82,6 +83,11 @@ function scrollEvent() {
           }
       </section>
       <Footer />
+ {list.length <= 0 &&  
+      <div className="loading"> 
+      <p>Carregando</p>
+      </div>
+      }
     </div>
   );
 }
