@@ -3,6 +3,7 @@ import {React , useEffect , useState} from 'react';
 import Row from './components/Row'
 import FeatureMovie from './components/FeatureMovie';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import './App.css';
 
 
@@ -79,6 +80,7 @@ function scrollEvent() {
             })
           }
       </section>
+      <Footer />
     </div>
   );
 }

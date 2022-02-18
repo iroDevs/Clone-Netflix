@@ -5,7 +5,7 @@ export default function Header({black}) {
   return (
     <header className={black ? 'black' : ''}>
       <div className="heaer-logo">
-        <a href="#" className='logo'>
+        <a href="https://github.com/iroDevs/Clone-Netflix/tree/main/src" target='_blank' className='logo'>
               PedroFlix
         </a>
       </div>
