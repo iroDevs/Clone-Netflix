@@ -25,4 +25,5 @@ npm start
 5. JS
 
 ## Link da aplicação
- https://pedroclonenetflix-qfxfnxn14-irodevs.vercel.app/
+ainda em desenvolvimento
+
