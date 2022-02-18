@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import RequestApi from './RequestApi';
 import {React , useEffect , useState} from 'react';
 import Row from './components/Row'
