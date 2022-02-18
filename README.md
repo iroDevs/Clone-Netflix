@@ -23,7 +23,14 @@ npm start
 3. HTML5
 4. CSS3
 5. JS
+6. MaterialUI
+> o projeto está 100% responsivo
 
 ## Link da aplicação
-ainda em desenvolvimento
+Link : https://pedroflix-flax.vercel.app/
+
+> deploy feito no vercel por causa da facilidade de lidar com front-end
+
+
+
 
