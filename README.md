@@ -3,7 +3,7 @@ empresa com um acervo de filmes gigantesco, e características de UX únicas con
 
 >Nesse projeto estarei desenvolvendo apenas o front-end , nesse caso todos os dados de filmes virão de uma API externa
 
-**Objetivo: ** Quando acabei de estudar React resolvi provar para mim mesmo que eu conseguia desenvolver qualquer coisa que eu quisesse utilizando tal tecnologia, resolvi fazer esse clone como desafio pessoal para mim mesmo, logo escolhi a netflix por possuir detalhes de UX que acho muito interessante
+**Objetivo:** Quando acabei de estudar React resolvi provar para mim mesmo que eu conseguia desenvolver qualquer coisa que eu quisesse utilizando tal tecnologia, resolvi fazer esse clone como desafio pessoal para mim mesmo, logo escolhi a netflix por possuir detalhes de UX que acho muito interessante
 
 Como rodar esse, app
 
@@ -16,10 +16,12 @@ Como rodar esse, app
 > npm install     
 npm start
 
-##Tecnologias usadas
+## Tecnologias usadas
 
-1.API
-2.reactjs
-3.html
-4.css
-5.js
+1. API(Web Service)
+2. React.JS
+3. HTML5
+4. CSS3
+5. JS
+
+## Link da aplicação
