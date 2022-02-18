@@ -1,0 +1,25 @@
+.logo {
+  text-decoration: none;
+  color: red;
+  font-weight:700;
+  font-size:30px;
+  padding:20px;
+}
+
+header {
+  position:fixed;
+  z-index: 999;
+  left:0;
+  top:0;
+  right:0;
+  height: 70px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:transparent;
+  transition: all ease 0.5;
+}
+
+header.black {
+  background-color: #141414
+}
