@@ -4,6 +4,8 @@ import Key from './Api';
 const {API_KEY , API_URL} = Key
 
 const config = 'language=pt-BR&api_key='
+const movieRequest = '/movie/';
+const tvRequest = '/tv/';
 
 const URL = {
   originais:`/discover/tv?with_network=213&${config}${API_KEY}`,
@@ -68,9 +70,24 @@ async function getHomeList() {
     },
   ]
 }
+//as informações dos filmes estão incompletas nessa função vamos atras das infos que faltam
+async function getInfoById(movieId,type) {
+  let retorno = {};
+  
+  if(movieId){
+    if (type === 'movie') {
+      retorno = await getAPI(`${movieRequest}${movieId}?${config}${API_KEY}`)
+      return retorno;
+    } else {
+      retorno = await getAPI(`${tvRequest}${movieId}?${config}${API_KEY}`)
+      return retorno;
+    }
 
 
+  }
+}
 
 export default {
   getHomeList,
+  getInfoById,
 }
