@@ -2,6 +2,7 @@ import RequestApi from './RequestApi';
 import {React , useEffect , useState} from 'react';
 import Row from './components/Row'
 import FeatureMovie from './components/FeatureMovie';
+import Header from './components/Header';
 import './App.css';
 
 
@@ -9,7 +10,7 @@ function App() {
    
   const [list , setList] = useState([])
   const [featureData, setFeatureData] = useState(null)
-
+  const [blackHeader , setBlackHeader] = useState(false)
  function getRandomInt(min, max) {
   min = Math.ceil(min);
   max = Math.floor(max);
@@ -39,12 +40,28 @@ function App() {
   useEffect( ()=>{
     getAllMovies();
 
-  },[])
+  },[]);
+
+function scrollEvent() {
+  if (window.scrollY > 10) {
+    setBlackHeader(true);
+  }else {
+    setBlackHeader(false);
+  }
+}
+   useEffect( ()=>{
+  window.addEventListener('scroll',scrollEvent)
+
+  return () => {
+    window.removeEventListener('scroll',scrollEvent);
+  }
+  },[]);
 
 
   return (
     <div >
 
+    <Header black={blackHeader} />
       {
         featureData ? 
         <FeatureMovie item={featureData} />
