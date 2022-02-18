@@ -31,3 +31,34 @@
 .movieRow-list {
   width: 9999999999px;
 }
+
+
+
+
+.movieRow-right, .movieRow-left {
+  position: absolute;
+  width: 40px;
+  height:225px;
+  z-index: 99;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color:rgba(0, 0, 0, 0.596);
+  cursor: pointer;
+  transition : all ease 0.5s;
+  opacity: 0;
+}
+.movieRow-left {
+  left:0;
+}
+
+
+.movieRow-right {
+  right:0;
+} 
+
+.Row:hover .movieRow-left , 
+.Row:hover .movieRow-right {
+  opacity: 1;
+}
